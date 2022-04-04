@@ -20,9 +20,9 @@ def game(description, get_puzzle):
         user_answer = prompt.string('Your answer: ')
         if (answer != user_answer):
             print(
-                f"'{user_answer}' is wrong answer ;(. " \
+                f"'{user_answer}' is wrong answer ;(. "
                 f"Correct answer was '{answer}'.")
-            print(f"Let\'s try again, {name}")
+            print(f"Let\'s try again, {name}!")
             break
         else:
             print('Correct!')
