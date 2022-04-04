@@ -1,21 +1,25 @@
 name: lint
 
 on:
-  push:
-    branches: 
-       - '**'
-  pull_request:
-    branches: 
-       - '**'
+  - push
+  - pull_request
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        # we want to test our package on several versions of Python
+        python-version: [3.10]
 
     steps:
     - uses: actions/checkout@v3
-    
+    - uses: actions/setup-python@v3
+      with:
+        python-version: '3.10'
+          
     - name: Install Poetry
       uses: snok/install-poetry@v1
       
