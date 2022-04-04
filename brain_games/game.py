@@ -1,7 +1,7 @@
 import prompt
 
 
-rounds = 3
+ROUNDS = 3
 
 
 def greet():
@@ -11,10 +11,10 @@ def greet():
     return name
 
 
-def game(description, get_puzzle):
+def run_game(description, get_puzzle):
     name = greet()
     print(description)
-    for x in range(rounds):
+    for x in range(ROUNDS):
         (question, answer) = get_puzzle()
         print(f'Question: {question}')
         user_answer = prompt.string('Your answer: ')
@@ -26,5 +26,5 @@ def game(description, get_puzzle):
             break
         else:
             print('Correct!')
-    if (x == (rounds - 1)):
+    if (x == (ROUNDS - 1)):
         print(f'Congratulations, {name}!')

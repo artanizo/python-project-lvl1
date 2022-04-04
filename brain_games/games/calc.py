@@ -1,6 +1,6 @@
 from random import randint, choice
 
-description = 'What is the result of the expression?'
+DESCRIPTION = 'What is the result of the expression?'
 
 operators = '+-*'
 
